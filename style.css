@@ -55,7 +55,7 @@ body, input, button, textarea {
 }
 
 /* Cards */
-.cards {
+#cards {
     background: var(--bg-cards);
     margin-top: 9rem;
     padding: 5.2rem 3.9rem;
@@ -150,43 +150,12 @@ footer {
 }
 
 /* Media */
-@media (min-width: 1024px) {
-    .astronaut {
-        display: grid;
-        grid-template-areas: "1fr 1fr";
-        justify-content: center;
-        align-items: center;
-        padding: 0 10.9rem;
-        max-height: 83.6rem;
-        gap: 12rem;
-    }
-
-    .hero {
-        order: 2;
-    }
-
-    .hero-info {
-        order: 1;
-    }
-
-    .cards {
-        grid-template-areas: "1fr 1fr 1fr";
-        padding: 6.4rem 6.4rem;
-    }
-
-    .contact {
-        padding: 9.4rem 6.4rem;
-    }
-}
-
 @media (min-width: 1440px) {
     .astronaut {
         display: grid;
         grid-template-areas: "1fr 1fr";
-        justify-content: center;
-        align-items: center;
-        padding: 0 10.9rem;
-        max-height: 83.6rem;
+        align-items: stretch;
+        height: 83.6rem;
         gap: 12rem;
     }
 
@@ -194,13 +163,29 @@ footer {
         order: 2;
     }
 
+    .hero img {
+        height: 100vh;
+    }
+
     .hero-info {
+        display: flex;
+        justify-content: center;
+        padding-left: 10rem;
         order: 1;
     }
+
+    .hero-info h1 {
+        font-size: 5.6rem;
+    }
+
+    .hero-info p {
+        font-size: 3rem;
+    }
     
-    .cards {
+    #cards {
         grid-template-areas: "1fr 1fr 1fr";
         padding: 6.4rem 11.2rem;
+        margin-top: 0;
     }
 
     .contact {
