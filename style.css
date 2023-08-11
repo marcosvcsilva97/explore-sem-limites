@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    
+    --color-heading: #B52184;
+    --color-text: #312D64;
+    --color-border: #312D64;
+    --bg-card: #FFFFFF;
+    --bg-cards: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --ot-input: #312D64;
+    --bg-button: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --color-button: #FFFFFF;
+    --bg-footer: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --color-footer: #FFFFFF;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+body, input, button, textarea {
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Astronaut */
+.astronaut {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-info h1 {
+    color: var(--color-heading);
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-top: 1.6rem;
+}
+
+.hero-info p {
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+/* Cards */
+.cards {
+    background: var(--bg-cards);
+    margin-top: 9rem;
+    padding: 5.2rem 3.9rem;
+    display: grid;
+    gap: 5rem;
+}
+
+.card {
+    border-radius: 2rem;
+    background: var(--bg-card);
+    padding: 2.6rem;
+}
+
+.info-card {
+    margin-top: 3.2rem;
+}
+
+.info-card h2 {
+    color: var(--color-heading);
+    font-size: 2.9rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.info-card p {
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Contact */
+.contact {
+    padding: 7.8rem 4rem 6.5rem;
+}
+
+.contact h2 {
+    color: var(--color-heading);
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 4.2rem;
+}
+
+.input-wrapper {
+    margin-bottom: 2.4rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    border-radius: 1.6rem;
+    border: .15rem solid var(--color-border);
+    padding: 1.2rem 1.6rem;
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    outline: .2rem solid var(--ot-input);
+}
+
+.contact button {
+    border-radius: 16px;
+    border: none;
+    background: var(--bg-button);
+    padding: 1.6rem;
+    color: var(--color-button);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: capitalize;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-footer);
+    color: var(--color-footer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem;
+    height: 7.8rem;
+}
+
+/* Media */
+@media (min-width: 1024px) {
+    .astronaut {
+        display: grid;
+        grid-template-areas: "1fr 1fr";
+        justify-content: center;
+        align-items: center;
+        padding: 0 10.9rem;
+        max-height: 83.6rem;
+        gap: 12rem;
+    }
+
+    .hero {
+        order: 2;
+    }
+
+    .hero-info {
+        order: 1;
+    }
+
+    .cards {
+        grid-template-areas: "1fr 1fr 1fr";
+        padding: 6.4rem 6.4rem;
+    }
+
+    .contact {
+        padding: 9.4rem 6.4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .astronaut {
+        display: grid;
+        grid-template-areas: "1fr 1fr";
+        justify-content: center;
+        align-items: center;
+        padding: 0 10.9rem;
+        max-height: 83.6rem;
+        gap: 12rem;
+    }
+
+    .hero {
+        order: 2;
+    }
+
+    .hero-info {
+        order: 1;
+    }
+    
+    .cards {
+        grid-template-areas: "1fr 1fr 1fr";
+        padding: 6.4rem 11.2rem;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 9.2rem;
+        padding: 0;
+        height: 62.2rem;
+        margin: 0 auto;
+        background: url(./assets/star.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    
+    .contact .form-wrapper {
+        flex: 1;
+        margin-left: 10.9rem;
+    }
+
+    .contact .stars {
+        flex: 1;
+    }
+}
